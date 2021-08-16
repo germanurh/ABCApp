@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var numbersView: UIView!
     @IBOutlet weak var lettersView: UIView!
+    //vhwlrsvjvsjnuhvejroicoigncmsighiou
     // аутлет и сразу присваиваем настройки через didSet
     @IBOutlet weak var btnLearnHowToCount: UIButton! {
         didSet{
