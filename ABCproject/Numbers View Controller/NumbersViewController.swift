@@ -21,13 +21,17 @@ class NumbersViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //действия нажатой кнопки
     @IBAction func numberTapped(_ sender: UITapGestureRecognizer) {
         vc.soundPlayer("n\(numberInNumbersVC)")
     }
+    
+    //кнопка назад / переход на предыдущий экран
     @IBAction func backBtn(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
+    //функции свайпов по полной view в различные направления
     @IBAction func swipeOnView(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
         case .left:
@@ -40,6 +44,8 @@ class NumbersViewController: UIViewController {
             return
         }
     }
+    
+    //функции свайпов по картинке в различные направления
     @IBAction func swipeOnImageView(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
         case .left :
@@ -52,15 +58,20 @@ class NumbersViewController: UIViewController {
             return
         }
     }
+    
+    //действия кнопки вправо
     @IBAction func btnToRight(_ sender: UIButton) {
         goesRight()
         vc.soundPlayer("n\(numberInNumbersVC)")
     }
+    
+    //действия кнопки влево
     @IBAction func btnToLeft(_ sender: UIButton) {
         goesLeft()
         vc.soundPlayer("n\(numberInNumbersVC)")
     }
     
+    //фукция движений вправо
     func goesRight() {
         numberInNumbersVC += 1
         
@@ -73,6 +84,7 @@ class NumbersViewController: UIViewController {
         imageViewOutletForCatsPicture.image = UIImage(named: "cat\(numberInNumbersVC)")
     }
     
+    //функция движений влево
     func goesLeft() {
         numberInNumbersVC -= 1
         

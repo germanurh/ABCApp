@@ -8,7 +8,7 @@
 import UIKit
 
 class LevelsViewController: UIViewController {
-//    
+//    экран для подставления чисел для обучающих примеров (пример: 2 + _ = 4)
     @IBOutlet weak var upperLevelLabel: UILabel!
     @IBOutlet weak var exampleImageView: UIImageView!
     

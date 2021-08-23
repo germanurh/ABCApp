@@ -9,7 +9,7 @@ import UIKit
 
 class LearnHowToCountViewController: UIViewController {
     
-    
+    //коллекция аутлетов кнопок
     @IBOutlet var allBtns: [UIButton]! {
         didSet{
             for buttons in allBtns {
@@ -31,13 +31,13 @@ class LearnHowToCountViewController: UIViewController {
         }
     }
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
     }
     
+    //переход на другой экран по нажатию определенной кнопки
     @IBAction func buttonsToLevelsVC(_ sender: UIButton) {
         for openVC in 1...24 {
             if sender.tag == openVC {
@@ -48,7 +48,8 @@ class LearnHowToCountViewController: UIViewController {
             
                 var openedViewController = openVC
                 LevelsViewController.upperLevelLabel.text = "Уровень \(openedViewController)"
-
+                
+                
                 if openedViewController == 1 {
                     LevelsViewController.exampleImageView.image = UIImage(named: "Level1")
 //                  условия в примере 2+2=4
@@ -92,6 +93,7 @@ class LearnHowToCountViewController: UIViewController {
         }
     }
     
+//возврат на предыдущий экран
     @IBAction func backButton(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }

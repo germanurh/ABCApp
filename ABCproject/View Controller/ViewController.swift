@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var numbersView: UIView!
     @IBOutlet weak var lettersView: UIView!
-    //vhwlrsvjvsjnuhvejroicoigncmsighiouh
+    
     // аутлет и сразу присваиваем настройки через didSet
     @IBOutlet weak var btnLearnHowToCount: UIButton! {
         didSet{
@@ -132,7 +132,7 @@ class ViewController: UIViewController {
             }
         }
     }
-    
+    //звук нажатия на кнопки
     func soundPlayer(_ assetLetter : String){
         
         guard let audioData = NSDataAsset(name: assetLetter)?.data else {
